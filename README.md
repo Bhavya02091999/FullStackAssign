@@ -65,7 +65,5 @@ User Story 1.5: View & Modify Upcoming Drives
 - **Authentication**: Simulated (hardcoded)
 - **Exporting**: SheetJS, PDFKit
 
----
 
-## 🗂️ Folder Structure
 
