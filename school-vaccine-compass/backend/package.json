@@ -1,0 +1,20 @@
+{
+  "name": "vaccination-app-backend",
+  "version": "1.0.0",
+  "description": "Backend for School Vaccination Management System",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.21.2",
+    "mongoose": "^7.0.3",
+    "vaccination-app-backend": "file:"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
