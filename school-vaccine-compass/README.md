@@ -1,49 +1,66 @@
+# School Vaccination Portal
+
+The system enables school coordinators to manage student vaccinations through a centralized portal with features such as student record management, vaccination drive scheduling, vaccination status tracking, and report generation.
 
 
-**Use your preferred IDE**
+# Features Implemented (User Stories)
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+User Story 1.1: Login & Dashboard
+- Simulated login system (hardcoded token-based).
+- On successful login, coordinator is redirected to a dashboard.
+- Dashboard displays:
+  - Total number of students
+  - Percentage vaccinated
+  - Upcoming vaccination drives (within next 30 days)
+  - Message like “No upcoming drives” if none are scheduled.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+---
 
-Follow these steps:
+User Story 1.2: Add/Manage Student Details
+- Navigate to Student Management from the dashboard.
+- Features:
+  - Form to add students individually.
+  - Bulk CSV upload of student data.
+  - List, search, and filter students by name, class, ID, or vaccination status.
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+---
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+User Story 1.3: Generate Vaccination Reports
+- Navigate to Reports from the menu.
+- Select filters (vaccine name, date range, status).
+- View student details in a paginated table:
+  - Name, Class, Vaccine Name, Date, Status.
+- Option to export reports as:
+  - CSV
+  - Excel (XLSX)
+  - PDF
 
-# Step 3: Install the necessary dependencies.
-npm i
+---
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+User Story 1.4: Book a Vaccination Drive
+- Navigate to Vaccination Drives and click “Add Drive”.
+- Input:
+  - Vaccine name
+  - Date (must be at least 15 days in the future)
+  - Number of available doses
+  - Applicable classes (e.g., Grades 5–7)
+- Validations:
+  - No overlapping drives allowed.
 
-**Edit a file directly in GitHub**
+---
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+User Story 1.5: View & Modify Upcoming Drives
+- View all upcoming vaccination drives.
+- Drives scheduled in the future can be:
+  - Edited (date and number of doses).
+- Past drives are shown as read-only (editing disabled).
 
-**Use GitHub Codespaces**
+---
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+Tech Stack
 
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-
+Vite
+TypeScript
+React
+shadcn-ui
+Tailwind CSS
